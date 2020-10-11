@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv='cache-control' content='no-cache'> 
+    <meta http-equiv='expires' content='0'> 
+    <meta http-equiv='pragma' content='no-cache'> 
+
+    <!-- header vs footer css-->
+    <link rel="stylesheet" href="css/header-footer.css">
+    
+    <!-- Bootstrap 4 CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Thu vien animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- Khai bao fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    
+    <link href='https://fonts.googleapis.com/css2?family=Chewy&family=Fira+Sans+Extra+Condensed&family=Asap+Condensed&family=Roboto+Condensed&family=Bungee+Inline&family=VT323&family=Fira+Sans+Extra+Condensed&family=IBM+Plex+Sans&family=Fira+Sans+Extra+Condensed&family=Bangers&family=Bungee+Inline&family=Asap&family=Pangolin&family=Francois+One&family=Cabin&family=Special+Elite&display=swap' rel="stylesheet">
+    <!-- Thu vien jquery -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap 4 js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- Thu vien wow js -->
+    <script src="js/wow.min.js"></script>
+    <title>Trang chủ</title>
+    
+    <style type="text/css">
+        #anh-nen {
+            background-image: url('background.jpg'); 
+            height: 200px; 
+            background-repeat: no-repeat; 
+            background-size: cover;
+        }
+
+        .entity {
+            margin-left: 2px;
+            width: 185px;
+            background-color: white;
+        }
+
+        .entity:focus {
+            background-color: #3A6FCF
+            box-shadow: 1px 1px #007bff;
+        }
+
+        .entityfocus {
+            background-color: #007bff;
+            box-shadow: 1px 1px #007bff;
+        }
+
+        .card {
+            cursor: pointer;
+        }
+
+
+        #x {
+            position: absolute; 
+            left: 470px; 
+            z-index: 5; 
+
+            top: 15px; 
+            visibility: hidden;
+        }
+    </style>
+        
+</head>
+<body>
+	<!-- header -->
+	<div class="container" >
+
+		<div class="row" style="margin: 10px 0px">
+			<div class="col-3" style="padding-left: 0px;">
+				<img src="logo-left.png">
+			</div>
+			<div class="col-5" style="margin-top: 5px; padding-left: 0px;">
+				<img style="float: left; margin-right: 5px" src="logo_right.png">
+				<span style="font-size: 17px;">BỘ Y TẾ </span> <br>
+				<span style="font-size: 27px;">CỤC QUẢN LÝ DƯỢC </span>
+			</div>
+		</div>
+    </div>
+		
+    <div class="container-fluid" style="background-color: #0f2f4f;">
+        <div class="container">
+            <div class="row" style=" color: hsla(0,0%,100%,.5);  padding-top: 5px; padding-bottom: 5px;margin-left: -3px;" >
+
+                <div class="col-6">
+                    <div class="row justify-content-start">
+                        <ul class="nav">
+                          <li class="nav-item">
+                            <i class="fa fa-home"></i>
+                            <a class="nav-link" href="home.html">TRANG CHỦ</a>
+                          </li>
+                          <li class="nav-item">
+                            <i class="fas fa-capsules"></i>
+                            <a class="nav-link" href="#">THUỐC</a>
+                          </li>
+                          <li class="nav-item">
+                            <i class="fa fa-briefcase-medical"></i>
+                            <a class="nav-link" href="#">CƠ SỞ KINH DOANH</a>
+                          </li>
+                          
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="row justify-content-end">
+                        <span id="info-admin"></span>
+                        <ul class="nav">
+                          <li class="nav-item">
+                            <a class="nav-link" href="login.html">ĐĂNG NHẬP</a>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <!-- content -->
+    <div class="container-fluid" style="padding: 0;">
+        <div id="anh-nen" >
+            <div class="container" style="text-align: center">
+                <div style="padding-top: 40px">
+
+                    <div class="input-group" style="width: 50%; margin: auto; margin-top: 10px" >
+                        <div class="input-group-prepend" style="margin-right:2px">
+                            <button class=" btn btn-primary ">+</button>
+                        </div>
+                        
+                        
+                            <input id="thanhtimkiem" type="text" placeholder="tìm kiếm theo tên thuốc" class="form-control form-control-lg ng-valid ng-dirty ng-touched">
+                            <i id="x" class="fa fa-times " aria-hidden="true"></i>
+                        
+                        
+                        <div class="input-group-append" style="margin-left:2px">
+                            <button class="btn btn-primary search"><i class="fa fa-search fa-w-14 fa-2x" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="input-group justify-content-center" style="text-align: center; margin-top: 10px">
+
+                        <input type="button" class="btn btn-primary text-black-50 entity entityfocus" value="tên thuốc">
+                        <input type="button" class="btn btn-primary text-black-50 entity" value="hoạt chất">
+                        <input type="button" class="btn btn-primary text-black-50 entity" value="CSKD dược">
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- thuốc được tìm kiếm nhiều nhất -->
+    <div class="container-fluid text-white" style="background-color: #0f2f4f; height: 55px; text-align: center; padding-top: 10px; font-size: 20px">
+            <i class="fas fa-capsules"></i>
+            Thuốc được tìm kiếm nhiều nhất
+    </div>
+
+    <div class="container drug mt-3 mb-3">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="card">
+                  <img class="card-img-top" src="https://via.placeholder.com/400x400.png?text=ảnh%20thuốc" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                  </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                  <img class="card-img-top" src="https://via.placeholder.com/400x400.png?text=400x400" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                  </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- doanh nghiệp được tìm kiếm nhiều nhất -->
+    <div class="container-fluid text-white" style="background-color: #20c997; height: 55px; text-align: center; padding-top: 10px; font-size: 20px">
+            <i class="fa fa-briefcase-medical"></i>
+            Doanh nghiệp được tìm kiếm nhiều nhất
+    </div>
+
+    <div class="container company mt-3 mb-3">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="card">
+                  <img class="card-img-top" src="logo_right.png" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                  </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                  <img class="card-img-top" src="logo-left.png" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                  </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- footer -->
+    <div class="container-fluid footer" style="background-color: #17a2b8; height: 100px; text-align: center;">
+        <div>Ngân hàng dữ liệu ngành dược</div>
+        <div><b>Bản quyền: </b> Cục Quản lý Dược - Bộ Y tế</div>
+    </div>
+
+    <script>
+        // xử lý thanh tìm kiếm
+        $("#thanhtimkiem").keypress(function(event) {
+            /* Act on the event */
+            if ($(this).value != "")
+            {
+                $('#x').css("visibility",'visible');
+            }
+        });
+
+        $("#x").click(function(event) {
+            /* Act on the event */
+            $("#thanhtimkiem").val("");
+             $('#x').css("visibility",'hidden');
+        });
+
+        //xử lý chọn cách tìm kiếm
+
+        $(".entity").click(function(event) {
+            $('#thanhtimkiem').attr("placeholder", "tìm kiếm theo "+ $(this).val() );
+            /* Act on the event */
+            if (!$(this).hasClass('entityfocus'))
+            {
+                $(this).parent().children().removeClass('entityfocus');
+                $(this).addClass('entityfocus');
+                
+            }
+        });
+
+        $(".alo").click(function(event) {
+            /* Act on the event */
+            var a = $(this).text();
+            alert(a);
+        });
+
+        $('.search').click(function(event) {
+            /* Act on the event */
+            alert($('.entityfocus').val());
+        });
+
+        // xử lý click vào card
+        $('.card').click(function(event) {
+            /* Act on the event */
+            location.assign("info-thuoc.html");
+        });
+
+        // xử lý click vào search
+        $('.search').click(function(event) {
+            /* Act on the event */
+            location.assign("home-search.html");
+        });
+
+    </script>
+</body>
+</html>
