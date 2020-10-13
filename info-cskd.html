@@ -43,6 +43,10 @@
             font-weight: bold;
         }
 
+        .col-sm-8 {
+            text-align: right !important;
+        }
+
     </style>
         
 </head>
@@ -112,7 +116,7 @@
             <div class="col-sm-4">
                 Tên Công ty
             </div>
-            <div class="col-sm-8">
+            <div class="col-sm-8" style="text-align: right !important;">
                 Công ty Cổ phần Xuất nhập khẩu Y tế Thành phố Hồ Chí Minh
             </div>
         </div>
@@ -120,7 +124,7 @@
             <div class="col-sm-4">
                 Địa chỉ trụ sở chính
             </div>
-            <div class="col-sm-8">
+            <div class="col-sm-8" style="text-align: right !important;">
                 181 Nguyễn Đình Chiểu, Phường 6, Quận 3, TP. Hồ Chí Minh
             </div>
         </div>
@@ -182,6 +186,17 @@
         <div>Ngân hàng dữ liệu ngành dược</div>
         <div><b>Bản quyền: </b> Cục Quản lý Dược - Bộ Y tế</div>
     </div>
+
+
+
+    <script type="text/javascript">
+        $(".card .card-body a").click(function(event) {
+            /* Act on the event */
+             s = $(this).parent().children('.card-title').text();
+
+            $(this).attr('href', 'info-thuoc.html?thuoc=tuấn' );
+        });
+    </script>
 
 </body>
 </html>
